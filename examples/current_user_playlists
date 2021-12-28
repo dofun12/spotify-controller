@@ -1,0 +1,371 @@
+{
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/43u7NCBwG7lCSQkbNJwkgJ'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/43u7NCBwG7lCSQkbNJwkgJ',
+	'id': '43u7NCBwG7lCSQkbNJwkgJ',
+	'images': [{
+		'height': 640,
+		'url': 'https://mosaic.scdn.co/640/ab67616d0000b2730805ef0b9c57d117cb2143a4ab67616d0000b27311c497674d516a461eb63c89ab67616d0000b2731fcd19d56ad06561b76c1665ab67616d0000b27364dd1d44c033aeed9551854a',
+		'width': 640
+	}, {
+		'height': 300,
+		'url': 'https://mosaic.scdn.co/300/ab67616d0000b2730805ef0b9c57d117cb2143a4ab67616d0000b27311c497674d516a461eb63c89ab67616d0000b2731fcd19d56ad06561b76c1665ab67616d0000b27364dd1d44c033aeed9551854a',
+		'width': 300
+	}, {
+		'height': 60,
+		'url': 'https://mosaic.scdn.co/60/ab67616d0000b2730805ef0b9c57d117cb2143a4ab67616d0000b27311c497674d516a461eb63c89ab67616d0000b2731fcd19d56ad06561b76c1665ab67616d0000b27364dd1d44c033aeed9551854a',
+		'width': 60
+	}],
+	'name': 'Temporaria',
+	'owner': {
+		'display_name': 'Kevim Such',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/lemanoman'
+		},
+		'href': 'https://api.spotify.com/v1/users/lemanoman',
+		'id': 'lemanoman',
+		'type': 'user',
+		'uri': 'spotify:user:lemanoman'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'OCw1YTlhZGJjYmI2NThiNDRiODg5MGU3NTc1OWI2MWI0ZTc1OWY2YzAw',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/43u7NCBwG7lCSQkbNJwkgJ/tracks',
+		'total': 840
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:43u7NCBwG7lCSQkbNJwkgJ'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/2dz7gbTz1xEm1wZYout6Kk'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/2dz7gbTz1xEm1wZYout6Kk',
+	'id': '2dz7gbTz1xEm1wZYout6Kk',
+	'images': [{
+		'height': 640,
+		'url': 'https://i.scdn.co/image/ab67616d0000b273c31d3c870a3dbaf7b53186cc',
+		'width': 640
+	}],
+	'name': 'Matrix - Valley of death...',
+	'owner': {
+		'display_name': 'Kevim Such',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/lemanoman'
+		},
+		'href': 'https://api.spotify.com/v1/users/lemanoman',
+		'id': 'lemanoman',
+		'type': 'user',
+		'uri': 'spotify:user:lemanoman'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'MiwzYTQ0YzYwY2JmNTcxNTM4ZTY4MDZlOGFiM2Y2MmM4NTJhMTk1Mzgw',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/2dz7gbTz1xEm1wZYout6Kk/tracks',
+		'total': 1
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:2dz7gbTz1xEm1wZYout6Kk'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/78oW3V51fN3Fkc1XZVZ0zT'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/78oW3V51fN3Fkc1XZVZ0zT',
+	'id': '78oW3V51fN3Fkc1XZVZ0zT',
+	'images': [{
+		'height': 640,
+		'url': 'https://mosaic.scdn.co/640/ab67616d0000b2737068ffbb5ab14ce041413eddab67616d0000b273b2229a8fdf377abaf3652624ab67616d0000b273cc511468d242c4dc60a3b2f0ab67616d0000b273f672d4c9c87caddb065d714f',
+		'width': 640
+	}, {
+		'height': 300,
+		'url': 'https://mosaic.scdn.co/300/ab67616d0000b2737068ffbb5ab14ce041413eddab67616d0000b273b2229a8fdf377abaf3652624ab67616d0000b273cc511468d242c4dc60a3b2f0ab67616d0000b273f672d4c9c87caddb065d714f',
+		'width': 300
+	}, {
+		'height': 60,
+		'url': 'https://mosaic.scdn.co/60/ab67616d0000b2737068ffbb5ab14ce041413eddab67616d0000b273b2229a8fdf377abaf3652624ab67616d0000b273cc511468d242c4dc60a3b2f0ab67616d0000b273f672d4c9c87caddb065d714f',
+		'width': 60
+	}],
+	'name': 'Dance with the moonlight',
+	'owner': {
+		'display_name': 'Yueyi Yin',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/1110204544'
+		},
+		'href': 'https://api.spotify.com/v1/users/1110204544',
+		'id': '1110204544',
+		'type': 'user',
+		'uri': 'spotify:user:1110204544'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'MzQsYTc3NGQ0OWIwNzU2NzBmY2VhODZmOTY0N2Q2MTMxYzYxNDkyNmMwMw==',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/78oW3V51fN3Fkc1XZVZ0zT/tracks',
+		'total': 25
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:78oW3V51fN3Fkc1XZVZ0zT'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/2ZgUSZrTA4uwclsUxZ0ZtK'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/2ZgUSZrTA4uwclsUxZ0ZtK',
+	'id': '2ZgUSZrTA4uwclsUxZ0ZtK',
+	'images': [{
+		'height': 640,
+		'url': 'https://mosaic.scdn.co/640/ab67616d0000b2730c590d55a258ef498e1ef322ab67616d0000b2737db6ef566b3cd2479c903f86ab67616d0000b273910e916f3d40fa76649dbf3eab67616d0000b273b682a2bd3fba253845959db5',
+		'width': 640
+	}, {
+		'height': 300,
+		'url': 'https://mosaic.scdn.co/300/ab67616d0000b2730c590d55a258ef498e1ef322ab67616d0000b2737db6ef566b3cd2479c903f86ab67616d0000b273910e916f3d40fa76649dbf3eab67616d0000b273b682a2bd3fba253845959db5',
+		'width': 300
+	}, {
+		'height': 60,
+		'url': 'https://mosaic.scdn.co/60/ab67616d0000b2730c590d55a258ef498e1ef322ab67616d0000b2737db6ef566b3cd2479c903f86ab67616d0000b273910e916f3d40fa76649dbf3eab67616d0000b273b682a2bd3fba253845959db5',
+		'width': 60
+	}],
+	'name': "Cyberpunk 'n' Dubstep",
+	'owner': {
+		'display_name': 'Kevim Such',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/lemanoman'
+		},
+		'href': 'https://api.spotify.com/v1/users/lemanoman',
+		'id': 'lemanoman',
+		'type': 'user',
+		'uri': 'spotify:user:lemanoman'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'MjIsOWM1MzUzNGQ2ODZiOGMwYWJhYTlmMTc1MDkxN2ZlMTJlNWIxM2U0Yg==',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/2ZgUSZrTA4uwclsUxZ0ZtK/tracks',
+		'total': 100
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:2ZgUSZrTA4uwclsUxZ0ZtK'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/4ZEF7lmLwjrc279WmZ43zo'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/4ZEF7lmLwjrc279WmZ43zo',
+	'id': '4ZEF7lmLwjrc279WmZ43zo',
+	'images': [{
+		'height': 640,
+		'url': 'https://i.scdn.co/image/ab67616d0000b273199527ea98e780e65a9afc65',
+		'width': 640
+	}],
+	'name': 'Cyberpunk 2077 Radio vol1,vol2,vol3',
+	'owner': {
+		'display_name': 'Kevim Such',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/lemanoman'
+		},
+		'href': 'https://api.spotify.com/v1/users/lemanoman',
+		'id': 'lemanoman',
+		'type': 'user',
+		'uri': 'spotify:user:lemanoman'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'NCxkNGQ1OTVmZGFmYTM0MDM1YjkzODVmNzUwOWYyOWIwMzA4NjA2OGUw',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/4ZEF7lmLwjrc279WmZ43zo/tracks',
+		'total': 31
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:4ZEF7lmLwjrc279WmZ43zo'
+} {
+	'collaborative': False,
+	'description': 'An attempted algorithmic introduction to Gothic Symphonic Metal based on math and listening data from the Large Genre Collider. For even more, check out <a href="spotify:playlist:61BVo2kYujeavfw38gf5rm">The Sound of Gothic Symphonic Metal</a>.',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/0Cs9cO4EAjtHxDIk6WCG8L'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/0Cs9cO4EAjtHxDIk6WCG8L',
+	'id': '0Cs9cO4EAjtHxDIk6WCG8L',
+	'images': [{
+		'height': None,
+		'url': 'https://i.scdn.co/image/ab67706c0000bebb711d81ad07a6abc195ee0e4c',
+		'width': None
+	}],
+	'name': 'Intro to Gothic Symphonic Metal',
+	'owner': {
+		'display_name': 'Particle Detector',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/particleintroductor'
+		},
+		'href': 'https://api.spotify.com/v1/users/particleintroductor',
+		'id': 'particleintroductor',
+		'type': 'user',
+		'uri': 'spotify:user:particleintroductor'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'MTg0LGVlODY2OTUxZTg5NmYzM2MxYWYyMGYyNGJhNWJiZTE4MzA2M2RjZDM=',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/0Cs9cO4EAjtHxDIk6WCG8L/tracks',
+		'total': 50
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:0Cs9cO4EAjtHxDIk6WCG8L'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/3G0n2Atuo0cQvlHMqTAtcn'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/3G0n2Atuo0cQvlHMqTAtcn',
+	'id': '3G0n2Atuo0cQvlHMqTAtcn',
+	'images': [{
+		'height': 640,
+		'url': 'https://mosaic.scdn.co/640/ab67616d0000b2731336b31b6a1799f0de5807acab67616d0000b27343de9079ae02773c1fae9a26ab67616d0000b2735422fe1b3700fc6fa354dbc1ab67616d0000b27368384dd85fd5e95831252f60',
+		'width': 640
+	}, {
+		'height': 300,
+		'url': 'https://mosaic.scdn.co/300/ab67616d0000b2731336b31b6a1799f0de5807acab67616d0000b27343de9079ae02773c1fae9a26ab67616d0000b2735422fe1b3700fc6fa354dbc1ab67616d0000b27368384dd85fd5e95831252f60',
+		'width': 300
+	}, {
+		'height': 60,
+		'url': 'https://mosaic.scdn.co/60/ab67616d0000b2731336b31b6a1799f0de5807acab67616d0000b27343de9079ae02773c1fae9a26ab67616d0000b2735422fe1b3700fc6fa354dbc1ab67616d0000b27368384dd85fd5e95831252f60',
+		'width': 60
+	}],
+	'name': '',
+	'owner': {
+		'display_name': 'Steve Young',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/1138421651'
+		},
+		'href': 'https://api.spotify.com/v1/users/1138421651',
+		'id': '1138421651',
+		'type': 'user',
+		'uri': 'spotify:user:1138421651'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'NjEsMzdiNWRlYWNmMDVmMGY3ODIwMzNhZTdiYTQ0ZjM4NmI1ZjM0Y2RkMg==',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/3G0n2Atuo0cQvlHMqTAtcn/tracks',
+		'total': 133
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:3G0n2Atuo0cQvlHMqTAtcn'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/0YtyvleNhEN862v2tthIka'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/0YtyvleNhEN862v2tthIka',
+	'id': '0YtyvleNhEN862v2tthIka',
+	'images': [{
+		'height': None,
+		'url': 'https://i.scdn.co/image/ab67706c0000bebbfc9617384c3bc572ed583b81',
+		'width': None
+	}],
+	'name': "Billy's Pedal to the Metal",
+	'owner': {
+		'display_name': 'Rafael Busmayer',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/erre_be'
+		},
+		'href': 'https://api.spotify.com/v1/users/erre_be',
+		'id': 'erre_be',
+		'type': 'user',
+		'uri': 'spotify:user:erre_be'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'NiwzYTBlZTI1ZDAwZWFkNzkzOGZmOGE1YzFkYzliZWVmNjA4NTU1M2Ri',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/0YtyvleNhEN862v2tthIka/tracks',
+		'total': 66
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:0YtyvleNhEN862v2tthIka'
+} {
+	'collaborative': False,
+	'description': '',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/3waYYfcv6uNkCrKfkeSNkL'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/3waYYfcv6uNkCrKfkeSNkL',
+	'id': '3waYYfcv6uNkCrKfkeSNkL',
+	'images': [{
+		'height': 640,
+		'url': 'https://mosaic.scdn.co/640/ab67616d0000b273321b3e2a67aa5a3e07c04445ab67616d0000b27379330c9bab1cb934df07b969ab67616d0000b273bce36707076282a49639d8b5ab67616d0000b273f4cb1223f853cb2324ad983b',
+		'width': 640
+	}, {
+		'height': 300,
+		'url': 'https://mosaic.scdn.co/300/ab67616d0000b273321b3e2a67aa5a3e07c04445ab67616d0000b27379330c9bab1cb934df07b969ab67616d0000b273bce36707076282a49639d8b5ab67616d0000b273f4cb1223f853cb2324ad983b',
+		'width': 300
+	}, {
+		'height': 60,
+		'url': 'https://mosaic.scdn.co/60/ab67616d0000b273321b3e2a67aa5a3e07c04445ab67616d0000b27379330c9bab1cb934df07b969ab67616d0000b273bce36707076282a49639d8b5ab67616d0000b273f4cb1223f853cb2324ad983b',
+		'width': 60
+	}],
+	'name': 'nostalgic',
+	'owner': {
+		'display_name': 'Luara Melchor',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/225sd5fghtuzr4cxzhsjlbufi'
+		},
+		'href': 'https://api.spotify.com/v1/users/225sd5fghtuzr4cxzhsjlbufi',
+		'id': '225sd5fghtuzr4cxzhsjlbufi',
+		'type': 'user',
+		'uri': 'spotify:user:225sd5fghtuzr4cxzhsjlbufi'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'ODcsYWM1NmNiOTE4YjQxMDI4ZjY0MDdhMjhlMDNhOGZkNTdjZTRjMjJiOA==',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/3waYYfcv6uNkCrKfkeSNkL/tracks',
+		'total': 85
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:3waYYfcv6uNkCrKfkeSNkL'
+} {
+	'collaborative': False,
+	'description': 'Only the biggest Hardstyle',
+	'external_urls': {
+		'spotify': 'https://open.spotify.com/playlist/37i9dQZF1DX0pH2SQMRXnC'
+	},
+	'href': 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0pH2SQMRXnC',
+	'id': '37i9dQZF1DX0pH2SQMRXnC',
+	'images': [{
+		'height': None,
+		'url': 'https://i.scdn.co/image/ab67706f000000035d33f9c35d2a614eb7e23ed5',
+		'width': None
+	}],
+	'name': 'Hardstyle Bangers',
+	'owner': {
+		'display_name': 'Spotify',
+		'external_urls': {
+			'spotify': 'https://open.spotify.com/user/spotify'
+		},
+		'href': 'https://api.spotify.com/v1/users/spotify',
+		'id': 'spotify',
+		'type': 'user',
+		'uri': 'spotify:user:spotify'
+	},
+	'primary_color': None,
+	'public': True,
+	'snapshot_id': 'MTY0MDY2MDcyNywwMDAwMDAwMGQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0Mjdl',
+	'tracks': {
+		'href': 'https://api.spotify.com/v1/playlists/37i9dQZF1DX0pH2SQMRXnC/tracks',
+		'total': 200
+	},
+	'type': 'playlist',
+	'uri': 'spotify:playlist:37i9dQZF1DX0pH2SQMRXnC'
+}

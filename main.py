@@ -16,9 +16,10 @@ def print_hi(name):
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 def list_playlists():
-    playlists = sp.current_user_playlists(limit=20, offset=0)
+    playlists = sp.current_user_playlists(limit=10, offset=0)
     for idx, playlist in enumerate(playlists['items']):
-        print(playlist)
+        # print(playlist)
+        print(playlist['id']+" - "+playlist['name'])
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
