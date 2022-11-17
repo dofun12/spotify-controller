@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "spotify-controller"
+version = "0.1.0"
+description = ""
+authors = ["kevim <k.v.n.such@gmail.com>"]
+readme = "README.md"
+packages = [{include = "spotify_controller"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pymongo = "^4.3.2"
+spotipy = "^2.21.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
