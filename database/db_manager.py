@@ -35,7 +35,7 @@ class DBManager:
         return os.environ[var_name]
 
     def __init__(self):
-        self.MONGODB_HOST = self.set_var_if_exists("MONGODB_HOST", "192.168.15.101")
+        self.MONGODB_HOST = self.set_var_if_exists("MONGODB_HOST", "localhost")
         self.MONGODB_PORT = self.set_var_if_exists("MONGODB_PORT", "27017")
         self.MONGODB_PWD = self.set_var_if_exists("MONGODB_PWD", "root")
         self.MONGODB_USER = self.set_var_if_exists("MONGODB_USER", "root")
@@ -85,7 +85,7 @@ class DBManager:
         collection = db['tracks']
         cursor = collection.aggregate([
             {'$match': {'artist_id': artist_id}},
-            {'$match': {'$expr': {'$lt': [0.9, {'$rand': {}}]}}},
+            {'$match': {'$expr': {'$lte': [1, {'$rand': {}}]}}},
             {'$limit': limit}
         ])
         # cursor = collection.find({'artist_id': artist_id, '$expr': {'$lt': [0.5, {'$rand: {}'}]}}).limit(limit)
