@@ -135,12 +135,37 @@ if __name__ == '__main__':
         'Eric Clapton',
         'Stratovarius',
         'Megadeath',
-        'Metallica'
+        'Metallica',
+        'Alok',
+        'Jon Bon Jovi',
+        'Scorpions',
+        'Desireless',
+        'Alestorm',
+        'Ira!',
+        'Cigarettes After Sex',
+        'Eagles',
+        'Arctic Monkeys',
+        'Greta Van Fleet',
+        'The Killers',
+        'Stone Sour',
+        'Accept',
+        'Angra',
+        'Santana',
+        'Motörhead',
+        'Korpiklaani',
+        'Powerwolf',
+        'Dark Moor',
+        'Avantasia',
+        'Edguy',
+        'The Weeknd',
+        'Journey',
+        'Frank Sinatra',
+        'Slipknot'
     ]
 
     i = 0
     top_ten_artists = []
-    while i <= 10:
+    while i <= 15:
         artists_len = len(artists)
         winner_pos = random.randrange(0, artists_len - 1)
         winner = artists[winner_pos]
@@ -155,7 +180,7 @@ if __name__ == '__main__':
         print(artist_name)
         artist = search(artist_name, 'artist', True)
         artist_discovery.discovery_artist_albums(artist)
-        selected_tracks.extend(db.find_tracks_by_artist(artist['id']))
+        selected_tracks.extend(db.find_tracks_by_artist(artist['id'], limit=7))
 
     day_as_string = today.strftime("%Y-%m-%d")
     if len(selected_tracks) == 0:
