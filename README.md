@@ -1,23 +1,23 @@
 # This projects creates a playlist on Spotify using a set of artists
 
-# Set this env variables
-## Mongo db Connection Properties
-MONGODB_HOST=localhost;
-MONGODB_PORT=27017";
-MONGODB_PWD=root";
-MONGODB_USER=root";
+## Environment Variables
+### Mongo db Connection Properties
+- MONGODB_HOST=localhost;
+- MONGODB_PORT=27017";
+- MONGODB_PWD=root";
+- MONGODB_USER=root";
 
-## Spotify Client Properties
-SPOTIPY_CLIENT_ID=<your-spotify_client_id>;
-SPOTIPY_CLIENT_SECRET=<yout-spotify_client_secret>;
-SPOTIPY_REDIRECT_URI=http://localhost:8080
+### Spotify Client Properties
+- SPOTIPY_CLIENT_ID=<your-spotify_client_id>;
+- SPOTIPY_CLIENT_SECRET=<yout-spotify_client_secret>;
+- SPOTIPY_REDIRECT_URI=http://localhost:8080
 
-## Good to use on Containers such docker
-PYTHONUNBUFFERED=1;
+### Good to use on Containers such docker
+- PYTHONUNBUFFERED=1;
 
-## Get Spotify Info here
+### Get Spotify Info here
 https://developer.spotify.com/dashboard/applications
 
 
-## Usage
-python main.py
+### Usage
+```python main.py```
