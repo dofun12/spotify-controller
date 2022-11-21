@@ -24,6 +24,7 @@ https://developer.spotify.com/dashboard/applications
 ## Usage
 
 ### Requirements
+- MongoDB Connection
 - Poetry
 - Python 3.9
 
