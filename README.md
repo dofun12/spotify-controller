@@ -19,5 +19,15 @@
 https://developer.spotify.com/dashboard/applications
 
 
-### Usage
+## Usage
+
+### Requirements
+- Poetry
+- Python 3.9
+
+
+### Install Deps
+```poetry install```
+
+### Running
 ```python main.py```
