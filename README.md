@@ -1,4 +1,6 @@
-# This projects creates a playlist on Spotify using a set of artists
+# About Project
+This projects creates a playlist on Spotify using a set of artists.
+The main objective, is build a new playlist Daily with random songs of selected artists.
 
 # Set this env variables
 ## Mongo db Connection Properties
