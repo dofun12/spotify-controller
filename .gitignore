@@ -1,3 +1,4 @@
 .idea/**
 .cache
 poetry.lock
+__pycache__/**
