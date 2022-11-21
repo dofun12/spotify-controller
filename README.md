@@ -1,4 +1,4 @@
-# This projects creates a playlist using a set of artists
+# This projects creates a playlist on Spotify using a set of artists
 
 # Set this env variables
 ## Mongo db Connection Properties
