@@ -85,8 +85,9 @@ class DBManager:
         collection = db['tracks']
         cursor = collection.aggregate([
             {'$match': {'artist_id': artist_id}},
-            {'$match': {'$expr': {'$lte': [1, {'$rand': {}}]}}},
-            {'$limit': limit}
+            {'$sample': { 'size': limit}},
+            # {'$match': {'$expr': {'$lte': [0, {'$rand': {}}]}}},
+            # {'$limit': limit}
         ])
         # cursor = collection.find({'artist_id': artist_id, '$expr': {'$lt': [0.5, {'$rand: {}'}]}}).limit(limit)
         return list(cursor)
