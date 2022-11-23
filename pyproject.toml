@@ -10,6 +10,10 @@ packages = [{include = "spotify_controller"}]
 python = "^3.9"
 pymongo = "^4.3.2"
 spotipy = "^2.21.0"
+fastapi = "^0.87.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+apscheduler = "~3.8"
+
 
 
 [build-system]
