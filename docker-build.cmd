@@ -1,0 +1,1 @@
+docker build -f docker/Dockerfile . -t spotify-controller:latest
