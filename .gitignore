@@ -2,3 +2,4 @@
 .cache
 poetry.lock
 __pycache__/**
+myvar.env
