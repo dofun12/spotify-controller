@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from generator.spotify_generator import SpotifyGenerator
 from routes.api import router as api_router
-
+from apscheduler.triggers.cron import CronTrigger
 
 def get_application() -> FastAPI:
     application = FastAPI()
@@ -41,8 +41,8 @@ async def startup_event():
         'apscheduler.timezone': 'america/sao_paulo',
     })
     generator = SpotifyGenerator()
-    scheduler.add_job(tick, 'interval', seconds=10)
-    scheduler.add_job(generator.generate, 'interval', minutes=5)
+
+    scheduler.add_job(func=generator.generate, trigger=CronTrigger(hour=0, minute=30))
     scheduler.start()
 
 
