@@ -1,11 +1,7 @@
-from datetime import date
-
+from apscheduler.schedulers.background import BackgroundScheduler
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi_amis_admin.admin.settings import Settings
-from fastapi_amis_admin.admin.site import AdminSite
-from fastapi_scheduler import SchedulerAdmin
-
+from generator.spotify_generator import SpotifyGenerator
 from routes.api import router as api_router
 
 
@@ -18,32 +14,35 @@ def get_application() -> FastAPI:
 
 
 app = get_application()
-site = AdminSite(settings=Settings(database_url_async='sqlite+aiosqlite:///amisadmin.db'))
-scheduler = SchedulerAdmin.bind(site)
 
 
-@scheduler.scheduled_job('interval', seconds=60)
-def interval_task_test():
-    print('interval task is run...')
-
-
-# use when you want to run the job periodically at certain time(s) of day
-@scheduler.scheduled_job('cron', hour=3, minute=30)
-def cron_task_test():
-    print('cron task is run...')
-
-
-# use when you want to run the job just once at a certain point of time
-@scheduler.scheduled_job('date', run_date=date(2022, 11, 11))
-def date_task_test():
-    print('date task is run...')
+# sqlite+aiosqlite:///amisadmin.db'
+def tick():
+    print("Opa foi carai")
 
 
 @app.on_event("startup")
-async def startup():
-    # Mount the background management system
-    site.mount_app(app)
-    # Start the scheduled task scheduler
+async def startup_event():
+    scheduler = BackgroundScheduler({
+        'apscheduler.jobstores.default': {
+            'type': 'sqlalchemy',
+            'url': 'sqlite:///jobs.sqlite'
+        },
+        'apscheduler.executors.default': {
+            'class': 'apscheduler.executors.pool:ThreadPoolExecutor',
+            'max_workers': '20'
+        },
+        'apscheduler.executors.processpool': {
+            'type': 'processpool',
+            'max_workers': '5'
+        },
+        'apscheduler.job_defaults.coalesce': 'false',
+        'apscheduler.job_defaults.max_instances': '3',
+        'apscheduler.timezone': 'UTC',
+    })
+    generator = SpotifyGenerator()
+    scheduler.add_job(tick, 'interval', seconds=10)
+    scheduler.add_job(generator.generate, 'interval', minutes=5)
     scheduler.start()
 
 
