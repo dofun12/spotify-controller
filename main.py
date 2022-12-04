@@ -41,8 +41,8 @@ async def startup_event():
         'apscheduler.timezone': 'america/sao_paulo',
     })
     generator = SpotifyGenerator()
-    scheduler.add_job(tick, 'interval', seconds=10)
-    scheduler.add_job(generator.generate, 'interval', minutes=5)
+    ## scheduler.add_job(tick, 'interval', seconds=10)
+    ## scheduler.add_job(generator.generate, 'interval', minutes=5)
     scheduler.start()
 
 
