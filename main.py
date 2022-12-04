@@ -38,7 +38,7 @@ async def startup_event():
         },
         'apscheduler.job_defaults.coalesce': 'false',
         'apscheduler.job_defaults.max_instances': '3',
-        'apscheduler.timezone': 'UTC',
+        'apscheduler.timezone': 'america/sao_paulo',
     })
     generator = SpotifyGenerator()
     scheduler.add_job(tick, 'interval', seconds=10)
