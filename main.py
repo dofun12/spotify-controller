@@ -71,9 +71,7 @@ if __name__ == '__main__':
 
         if nextval < 0:
             return default_value
-
-        if nextval == 0:
-            return default_value
+        return default_value
 
     def empty_or_default_str(nextval: Union[str, None], default_value: Union[str, None]):
         logger.info(f"Received... nextval => {nextval} ; default_value => {default_value}")
