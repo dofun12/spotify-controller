@@ -38,7 +38,7 @@ async def list_artists():
     return config
 
 
-@router.get(f"{CONTEXT}/generate/run")
+@router.get(f"{CONTEXT}/run")
 async def run():
     spotify_gen = SpotifyGenerator()
     return spotify_gen.generate()

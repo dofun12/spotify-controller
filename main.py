@@ -1,9 +1,13 @@
+import argparse
+
 from apscheduler.schedulers.background import BackgroundScheduler
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from generator.spotify_generator import SpotifyGenerator
 from routes.api import router as api_router
 from apscheduler.triggers.cron import CronTrigger
+from argparse import Namespace
+
 
 def get_application() -> FastAPI:
     application = FastAPI()
@@ -21,29 +25,7 @@ def tick():
     print("Opa foi carai")
 
 
-@app.on_event("startup")
-async def startup_event():
-    scheduler = BackgroundScheduler({
-        'apscheduler.jobstores.default': {
-            'type': 'sqlalchemy',
-            'url': 'sqlite:///jobs.sqlite'
-        },
-        'apscheduler.executors.default': {
-            'class': 'apscheduler.executors.pool:ThreadPoolExecutor',
-            'max_workers': '20'
-        },
-        'apscheduler.executors.processpool': {
-            'type': 'processpool',
-            'max_workers': '5'
-        },
-        'apscheduler.job_defaults.coalesce': 'false',
-        'apscheduler.job_defaults.max_instances': '3',
-        'apscheduler.timezone': 'america/sao_paulo',
-    })
-    generator = SpotifyGenerator()
 
-    scheduler.add_job(func=generator.generate, trigger=CronTrigger(hour=0, minute=30))
-    scheduler.start()
 
 
 origins = [
@@ -61,4 +43,48 @@ app.add_middleware(
 if __name__ == '__main__':
     import uvicorn
 
-    uvicorn.run(app, port=8080, host="127.0.0.1")
+    parser = argparse.ArgumentParser(description='Run Spotify Generator Server')
+    parser.add_argument('--host')
+    parser.add_argument('--port')
+    parser.add_argument('--cron-hour')
+    parser.add_argument('--cron-minute')
+    args: Namespace = parser.parse_args()
+
+    def empty_or_default(new_value, default_value, is_num=False):
+        if is_num and (new_value is None or new_value == 0):
+            return default_value
+        if new_value is None or len(new_value) == 0:
+            return default_value
+        return new_value
+
+    port = empty_or_default(args.port, 8080, True)
+    host = empty_or_default(args.host, "127.0.0.1")
+
+    cron_hour = empty_or_default(args.port, 8080, True)
+    print(f"{host} - {port}")
+
+    @app.on_event("startup")
+    async def startup_event():
+        scheduler = BackgroundScheduler({
+            'apscheduler.jobstores.default': {
+                'type': 'sqlalchemy',
+                'url': 'sqlite:///jobs.sqlite'
+            },
+            'apscheduler.executors.default': {
+                'class': 'apscheduler.executors.pool:ThreadPoolExecutor',
+                'max_workers': '20'
+            },
+            'apscheduler.executors.processpool': {
+                'type': 'processpool',
+                'max_workers': '5'
+            },
+            'apscheduler.job_defaults.coalesce': 'false',
+            'apscheduler.job_defaults.max_instances': '3',
+            'apscheduler.timezone': 'america/sao_paulo',
+        })
+        generator = SpotifyGenerator()
+
+        scheduler.add_job(func=generator.generate, trigger=CronTrigger(hour=0, minute=30))
+        scheduler.start()
+
+    uvicorn.run(app, port=port, host="127.0.0.1")
