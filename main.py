@@ -67,8 +67,11 @@ if __name__ == '__main__':
 
 
     def empty_or_default(nextval: Union[str, int, None], default_value: Union[str, int, None], is_num=False):
-        if is_num and (nextval is None or nextval == 0):
+        if is_num and nextval > 0:
+            return nextval
+        if is_num and nextval == 0:
             return default_value
+
         if nextval is None or len(nextval) == 0:
             return default_value
         return nextval
