@@ -101,7 +101,7 @@ if __name__ == '__main__':
             'apscheduler.timezone': 'america/sao_paulo',
         })
         generator = SpotifyGenerator()
-
+        logger.info(f"Cron will run on hour {cron_hour} and minute {cron_minute}")
         scheduler.add_job(func=generator.generate, trigger=CronTrigger(hour=cron_hour, minute=cron_minute))
         scheduler.start()
 
