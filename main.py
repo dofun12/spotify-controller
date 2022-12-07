@@ -74,8 +74,6 @@ if __name__ == '__main__':
     cron_hour = empty_or_default(args.cron_hour, 0, True)
     cron_minute = empty_or_default(args.cron_minute, 30, True)
 
-    logger.info(f"{host} - {port}")
-
 
     @app.on_event("startup")
     async def startup_event():
@@ -101,6 +99,4 @@ if __name__ == '__main__':
         scheduler.add_job(func=generator.generate, trigger=CronTrigger(hour=cron_hour, minute=cron_minute))
         scheduler.start()
 
-
-    print(logging.BASIC_FORMAT)
     uvicorn.run(app, port=port, host="127.0.0.1")
