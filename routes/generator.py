@@ -1,3 +1,4 @@
+import logging
 import spotipy
 from fastapi import APIRouter
 from spotipy import SpotifyOAuth
@@ -6,7 +7,7 @@ from starlette.responses import RedirectResponse
 from generator.spotify_generator import SpotifyGenerator
 
 router = APIRouter()
-
+logger = logging.getLogger('routes.generator')
 CONTEXT = "/generator"
 scope = "user-read-private,user-library-read,playlist-read-private,playlist-modify-private,playlist-modify-public"
 
@@ -19,7 +20,7 @@ async def generate():
 @router.get(f"{CONTEXT}/login")
 async def login():
     auth = SpotifyOAuth(scope=scope)
-    print(auth.get_authorize_url())
+    logger.debug(auth.get_authorize_url())
     return RedirectResponse(auth.get_authorize_url())
 
 

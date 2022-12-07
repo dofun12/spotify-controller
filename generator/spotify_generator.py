@@ -24,17 +24,17 @@ class SpotifyGenerator:
     def print_hi(self, name):
 
         # Use a breakpoint in the code line below to debug your script.
-        print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+        logger.info(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
     def search(self, query, type, first_result):
         result = self.sp.search(q=query, type=type)
-        # pprint.pprint(result)
+        # pprint.plogger.info(result)
         items = result['artists']['items']
         if first_result:
             return result['artists']['items'][0]
         return items
-        # pprint.pprint(result['artists']['items'][0])
-        # print(result['artists']['items'][0]['name'])
+        # pprint.plogger.info(result['artists']['items'][0])
+        # logger.info(result['artists']['items'][0]['name'])
 
     def load_configs(self):
         with open('config.yml', 'r', encoding='utf-8') as file:
@@ -62,17 +62,17 @@ class SpotifyGenerator:
     def find_playlists(self, playlist_name):
         playlists = self.sp.current_user_playlists(limit=10, offset=0)
         for idx, playlist in enumerate(playlists['items']):
-            # print(playlist)
+            # logger.info(playlist)
             if playlist_name == playlist['name']:
                 return playlist
-            # print(playlist['id'] + " - " + playlist['name'])
+            # logger.info(playlist['id'] + " - " + playlist['name'])
         return None
 
     def list_playlists(self):
         playlists = self.sp.current_user_playlists(limit=10, offset=0)
         for idx, playlist in enumerate(playlists['items']):
-            # print(playlist)
-            print(playlist['id'] + " - " + playlist['name'])
+            # logger.info(playlist)
+            logger.info(playlist['id'] + " - " + playlist['name'])
 
     # Press the green button in the gutter to run the script.
     def generate(self):
@@ -93,7 +93,7 @@ class SpotifyGenerator:
         db = DBManager()
         selected_tracks = []
         for artist_name in top_ten_artists:
-            print(artist_name)
+            logger.info(artist_name)
             artist = self.search(artist_name, 'artist', True)
             artist_discovery.discovery_artist_albums(artist)
             selected_tracks.extend(db.find_tracks_by_artist(artist['id'], limit=5))
