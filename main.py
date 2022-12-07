@@ -2,6 +2,8 @@ import argparse
 import logging
 from logging import Formatter
 import sys
+from typing import Union
+
 from apscheduler.schedulers.background import BackgroundScheduler
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -10,7 +12,6 @@ from routes.api import router as api_router
 from apscheduler.triggers.cron import CronTrigger
 from argparse import Namespace
 
-
 logoformato = Formatter(fmt="[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d] %(message)s",
                         datefmt="%Y-%m-%d %H:%M:%S")
 root_logger = logging.getLogger()  # no name
@@ -18,7 +19,6 @@ for handler in root_logger.handlers:
     if isinstance(handler, logging.StreamHandler):
         handler.setFormatter(logoformato)
 logger = logging.getLogger('main')
-
 
 
 def get_application() -> FastAPI:
@@ -60,15 +60,21 @@ if __name__ == '__main__':
     args: Namespace = parser.parse_args()
 
 
-    def empty_or_default(new_value, default_value, is_num=False):
-        if is_num and (new_value is None or new_value == 0):
-            return default_value
-        if new_value is None or len(new_value) == 0:
-            return default_value
-        return (int(new_value), new_value)[is_num]
+    def to_int(str_value: Union[str, None]):
+        if str_value is None:
+            return 0
+        return int(str_value)
 
 
-    port = empty_or_default(args.port, 8080, True)
+    def empty_or_default(nextval: Union[str, int, None], default_value: Union[str, int, None], is_num=False):
+        if is_num and (nextval is None or nextval == 0):
+            return default_value
+        if nextval is None or len(nextval) == 0:
+            return default_value
+        return nextval
+
+
+    port = empty_or_default(to_int(args.port), 8080, True)
     host = empty_or_default(args.host, "127.0.0.1")
 
     cron_hour = empty_or_default(args.cron_hour, 0, True)
@@ -98,5 +104,6 @@ if __name__ == '__main__':
 
         scheduler.add_job(func=generator.generate, trigger=CronTrigger(hour=cron_hour, minute=cron_minute))
         scheduler.start()
+
 
     uvicorn.run(app, port=port, host="127.0.0.1")
