@@ -71,19 +71,20 @@ if __name__ == '__main__':
 
         if nextval < 0:
             return default_value
-        return default_value
+        return nextval
 
     def empty_or_default_str(nextval: Union[str, None], default_value: Union[str, None]):
         logger.info(f"Received... nextval => {nextval} ; default_value => {default_value}")
         if nextval is None:
             return default_value
+        return nextval
 
     port = empty_or_default_number(to_int(args.port), 8080)
     host = empty_or_default_str(args.host, "127.0.0.1")
 
     cron_hour = empty_or_default_number(to_int(args.cron_hour), 0)
     cron_minute = empty_or_default_number(to_int(args.cron_minute), 30)
-
+    logger.info(f"port: {port};host: {host}; cron_hour: {cron_hour}; cron_minute: {cron_minute}")
 
     @app.on_event("startup")
     async def startup_event():
