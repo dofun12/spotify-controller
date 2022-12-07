@@ -55,8 +55,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Run Spotify Generator Server')
     parser.add_argument('--host')
     parser.add_argument('--port')
-    parser.add_argument('--cron_hour')
-    parser.add_argument('--cron_minute')
+    parser.add_argument('--cron-hour', dest='cron_hour')
+    parser.add_argument('--cron-minute', dest='cron_minute')
     args: Namespace = parser.parse_args()
 
 
