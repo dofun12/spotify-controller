@@ -65,7 +65,7 @@ if __name__ == '__main__':
             return default_value
         if new_value is None or len(new_value) == 0:
             return default_value
-        return (new_value, int(new_value))[is_num]
+        return (int(new_value), new_value)[is_num]
 
 
     port = empty_or_default(args.port, 8080, True)
