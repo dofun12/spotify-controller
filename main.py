@@ -62,26 +62,29 @@ if __name__ == '__main__':
 
     def to_int(str_value: Union[str, None]):
         if str_value is None:
-            return 0
+            return -1
         return int(str_value)
 
 
-    def empty_or_default(nextval: Union[str, int, None], default_value: Union[str, int, None], is_num=False):
-        if is_num and nextval > 0:
-            return nextval
-        if is_num and nextval == 0:
+    def empty_or_default_number(nextval: int, default_value: int):
+        logger.info(f"Received... nextval => {nextval} ; default_value => {default_value}")
+
+        if nextval < 0:
             return default_value
 
-        if nextval is None or len(nextval) == 0:
+        if nextval == 0:
             return default_value
-        return nextval
 
+    def empty_or_default_str(nextval: Union[str, None], default_value: Union[str, None]):
+        logger.info(f"Received... nextval => {nextval} ; default_value => {default_value}")
+        if nextval is None:
+            return default_value
 
-    port = empty_or_default(to_int(args.port), 8080, True)
-    host = empty_or_default(args.host, "127.0.0.1")
+    port = empty_or_default_number(to_int(args.port), 8080)
+    host = empty_or_default_str(args.host, "127.0.0.1")
 
-    cron_hour = empty_or_default(args.cron_hour, 0, True)
-    cron_minute = empty_or_default(args.cron_minute, 30, True)
+    cron_hour = empty_or_default_number(to_int(args.cron_hour), 0)
+    cron_minute = empty_or_default_number(to_int(args.cron_minute), 30)
 
 
     @app.on_event("startup")
